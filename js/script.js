@@ -18,6 +18,10 @@ const messages = document.querySelector(".messages");
 const message = messages.querySelectorAll(".message");
 const messageSearch = messages.querySelector("#message-search");
 
+// THEME
+const themeItem = document.querySelector("#theme-item");
+const themeModal = document.querySelector(".customize-theme");
+
 // ----------- SIDEBAR ------------
 
 // remove active class from all menu item
@@ -66,3 +70,17 @@ messagesNotification.addEventListener("click", () => {
     messages.style.boxShadow = "none";
   }, 2000);
 });
+
+// ============ THEME/DISPLAY CUSTOMIZATION ============
+function openModal() {
+  themeModal.style.display = "grid";
+}
+
+function closeModal(e) {
+  if (e.target.classList.contains("customize-theme")) {
+    themeModal.style.display = "none";
+  }
+}
+themeItem.addEventListener("click", openModal);
+
+themeModal.addEventListener("click", closeModal);
