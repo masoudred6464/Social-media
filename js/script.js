@@ -15,6 +15,8 @@ const messagesCount = document.querySelector(
 );
 const messagesNotification = document.querySelector("#messages-notifications");
 const messages = document.querySelector(".messages");
+const message = messages.querySelectorAll(".message");
+const messageSearch = messages.querySelector("#message-search");
 
 // ----------- SIDEBAR ------------
 
@@ -39,7 +41,24 @@ menuItem.forEach((item) => {
   });
 });
 
-// ------------- MESSAGE --------------
+// =========== MESSAGE ===========
+// searches chats
+function searchMessage() {
+  let val = messageSearch.value.toLocaleLowerCase();
+  console.log(val);
+  message.forEach((chat) => {
+    let name = chat.querySelector("h5").textContent.toLocaleLowerCase();
+    if (name.indexOf(val) != -1) {
+      chat.style.display = "flex";
+    } else {
+      chat.style.display = "none";
+    }
+  });
+}
+// search chat
+messageSearch.addEventListener("keyup", searchMessage);
+
+// hightlight messages card when messages menu item is clicked
 messagesNotification.addEventListener("click", () => {
   messagesCount.style.display = "none";
   messages.style.boxShadow = "0 0 1rem var(--color-primary)";
