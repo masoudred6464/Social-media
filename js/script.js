@@ -25,6 +25,10 @@ const themeModal = document.querySelector(".customize-theme");
 // FONT SIZE
 const fontSizes = document.querySelectorAll(".choose-size span");
 var root = document.querySelector(":root");
+
+// COLOR
+const colorPalette = document.querySelectorAll(".choose-color span");
+
 // ----------- SIDEBAR ------------
 
 // remove active class from all menu item
@@ -124,5 +128,33 @@ fontSizes.forEach((size) => {
     }
     // change font size of the root html element
     document.querySelector("html").style.fontSize = fontSize;
+  });
+});
+
+// ========= COLOR =======
+function removeClassActiveColor() {
+  colorPalette.forEach((color) => {
+    color.classList.remove("active");
+  });
+}
+colorPalette.forEach((color) => {
+  color.addEventListener("click", () => {
+    removeClassActiveColor();
+    color.classList.add("active");
+
+    let primaryHue;
+
+    if (color.classList.contains("color-1")) {
+      primaryHue = 252;
+    } else if (color.classList.contains("color-2")) {
+      primaryHue = 52;
+    } else if (color.classList.contains("color-3")) {
+      primaryHue = 352;
+    } else if (color.classList.contains("color-4")) {
+      primaryHue = 152;
+    } else if (color.classList.contains("color-5")) {
+      primaryHue = 202;
+    }
+    root.style.setProperty("--primary-color-hue", primaryHue);
   });
 });
