@@ -31,7 +31,7 @@ const colorPalette = document.querySelectorAll(".choose-color span");
 
 // BG COLOR
 const Bg1 = document.querySelector(".bg-1");
-const Bg2 = document.querySelector(".bg-2");
+// const Bg2 = document.querySelector(".bg-2");
 const Bg3 = document.querySelector(".bg-3");
 
 // ----------- SIDEBAR ------------
@@ -150,15 +150,15 @@ colorPalette.forEach((color) => {
     let primaryHue;
 
     if (color.classList.contains("color-1")) {
-      primaryHue = 252;
+      primaryHue = 0;
     } else if (color.classList.contains("color-2")) {
-      primaryHue = 52;
+      primaryHue = 100;
     } else if (color.classList.contains("color-3")) {
-      primaryHue = 352;
+      primaryHue = 200;
     } else if (color.classList.contains("color-4")) {
-      primaryHue = 152;
+      primaryHue = 300;
     } else if (color.classList.contains("color-5")) {
-      primaryHue = 202;
+      primaryHue = 500;
     }
     root.style.setProperty("--primary-color-hue", primaryHue);
   });
@@ -179,24 +179,24 @@ Bg1.addEventListener("click", () => {
   // add active class
   Bg1.classList.add("active");
   // remove active class from other
-  Bg2.classList.remove("active");
+  // Bg2.classList.remove("active");
   Bg3.classList.remove("active");
 
   window.location.reload();
 });
 
-Bg2.addEventListener("click", () => {
-  darkColorLightness = "95%";
-  whiteColorLightness = "20%";
-  lightColorLightness = "15%";
+// Bg2.addEventListener("click", () => {
+//   darkColorLightness = "95%";
+//   whiteColorLightness = "20%";
+//   lightColorLightness = "15%";
 
   // add active class
-  Bg2.classList.add("active");
+//   Bg2.classList.add("active");
   // remove active class from other
-  Bg1.classList.remove("active");
-  Bg3.classList.remove("active");
-  changeBg();
-});
+  // Bg1.classList.remove("active");
+  // Bg3.classList.remove("active");
+  // changeBg();
+// });
 
 Bg3.addEventListener("click", () => {
   darkColorLightness = "95%";
@@ -207,6 +207,6 @@ Bg3.addEventListener("click", () => {
   Bg3.classList.add("active");
   // remove active class from other
   Bg1.classList.remove("active");
-  Bg2.classList.remove("active");
+  // Bg2.classList.remove("active");
   changeBg();
 });

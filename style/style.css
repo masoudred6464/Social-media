@@ -2,28 +2,27 @@
 
 :root {
   /* ======= color ====== */
-  --primary-color-hue:252;
-  --dark-color-lightness:17%;
-  --light-color-lightness:95%;
-  --white-color-lightness:100%;
+  --primary-color-hue: 0;
+  --dark-color-lightness: 17%;
+  --light-color-lightness: 95%;
+  --white-color-lightness: 100%;
   --color-white: hsl(252, 30%, var(--white-color-lightness));
 
-  
-  --color-light: hsl(252, 30%, var(--light-color-lightness));
-  --color-gray: hsl(252, 15%, 65%);
+  --color-light: hsl(209, 100%, var(--light-color-lightness));
+  --color-gray: hsl(0, 0%, 33%);
   --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
   --color-secondary: hsl(252, 100%, 90%);
   --color-success: hsl(120, 95%, 65%);
-  --color-danger: hsl(0, 95%, 65%);
+  --color-danger: hsl(0, 100%, 50%);
   --color-dark: hsl(252, 30%, var(--dark-color-lightness));
   --color-black: hsl(252, 30%, 10%);
 
   /* ======== border and padding ======== */
-  --border-radius: 2rem;
-  --card-border-radius: 1rem;
-  --btn-padding: 0.6rem 2rem;
-  --search-padding: 0.6rem 1rem;
-  --card-padding: 1rem;
+  --border-radius: 1rem;
+  --card-border-radius: .5rem;
+  --btn-padding: 0.6rem 1.5rem;
+  --search-padding: 0.6rem .5rem;
+  --card-padding: .5rem;
 
   /* ========= sticy ======= */
   --sticky-top-left: 5.4rem;
@@ -43,7 +42,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   background: var(--color-light);
   color: var(--color-dark);
   overflow-x: hidden;
@@ -317,19 +316,19 @@ main .container .left .profile {
   background: url(/images/story-1.jpg) no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(2) {
-  background: url(/images/story-2.jpg) no-repeat center center/cover;
+  background: url(/images/story-1.jpg) no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(3) {
-  background: url(/images/story-3.jpg) no-repeat center center/cover;
+  background: url(/images/story-1.jpg) no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(4) {
-  background: url(/images/story-4.jpg) no-repeat center center/cover;
+  background: url(/images/story-1.jpg) no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(5) {
-  background: url(/images/story-5.jpg) no-repeat center center/cover;
+  background: url(/images/story-1.jpg) no-repeat center center/cover;
 }
 .middle .stories .story:nth-child(6) {
-  background: url(/images/story-6.jpg) no-repeat center center/cover;
+  background: url(/images/story-1.jpg) no-repeat center center/cover;
 }
 
 .middle .story .profile-photo {
@@ -552,7 +551,7 @@ main .container .right {
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
-  box-shadow: 0 0 1rem var(--color-primary) ;
+  box-shadow: 0 0 1rem var(--color-primary);
 }
 
 /* -------------- FONT SIZE --------- */
@@ -612,19 +611,19 @@ main .container .right {
 }
 
 .customize-theme .choose-color span:nth-child(1) {
-  background: hsl(252, 75%, 60%);
+  background: hsl(0, 75%, 60%);
 }
 .customize-theme .choose-color span:nth-child(2) {
-  background: hsl(52, 75%, 60%);
+  background: hsl(100, 75%, 60%);
 }
 .customize-theme .choose-color span:nth-child(3) {
-  background: hsl(352, 75%, 60%);
+  background: hsl(200, 75%, 60%);
 }
 .customize-theme .choose-color span:nth-child(4) {
-  background: hsl(152, 75%, 60%);
+  background: hsl(300, 75%, 60%);
 }
 .customize-theme .choose-color span:nth-child(5) {
-  background-color: hsl(202, 75%, 60%);
+  background-color: hsl(500, 75%, 60%);
 }
 
 .customize-theme .choose-color span.active {
@@ -706,7 +705,7 @@ main .container .right {
     display: none;
   }
 
-  .customize-theme .card{
+  .customize-theme .card {
     width: 80vw;
   }
 }
@@ -751,7 +750,7 @@ main .container .right {
     display: none;
   }
 
-  .customize-theme .card{
-    width:92vw;
+  .customize-theme .card {
+    width: 92vw;
   }
 }
